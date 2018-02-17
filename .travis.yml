@@ -13,3 +13,8 @@ script:
 after_success:
   - make docker_build
   - make docker_push
+
+deploy:
+  provider: heroku
+  app: immense-island-43524
+  api_key: ${HEROKU_API_KEY}
