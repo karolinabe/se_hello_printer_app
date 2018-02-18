@@ -1,6 +1,19 @@
 Simple Flask App
 ================
 
+
+Monitorowanie w StatusCake:
+
+.. image:: https://app.statuscake.com/button/index.php?Track=icYwk37XE0&Days=1&Design=1
+		:target: https://www.statuscake.com
+
+Travis:
+
+.. image:: https://travis-ci.org/karolinabe/se_hello_printer_app.svg?branch=master
+    :target: https://travis-ci.org/karolinabe/se_hello_printer_app
+
+
+
 Aplikacja Dydaktyczna wyświetlająca imię i wiadomość w różnych formatach dla zajęć
 o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
@@ -63,7 +76,7 @@ Pomocnicze
 
   ::
 
-    yum install python-pip
+    yum install -y python-pip
     pip install -U pip
     pip install virtualenv
     pip install virtualenvwrapper
@@ -85,7 +98,7 @@ Pomocnicze
       https://download.docker.com/linux/centos/docker-ce.repo
 
     yum makecache fast
-    yum install docker-ce
+    yum install docker-ce -y
     systemctl start docker
 
 Materiały
@@ -121,3 +134,10 @@ pip install -r test_requirements.txt
 make run
 make test
 make lint
+
+
+Monitoring
+==========
+
+Monitorujemy naszą stronę za pomocą StatusCake
+<a href="https://www.statuscake.com" title="Website Uptime Monitoring"><img src="https://app.statuscake.com/button/index.php?Track=icYwk37XE0&Days=1&Design=1" /></a>
