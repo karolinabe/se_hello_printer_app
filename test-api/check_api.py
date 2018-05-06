@@ -12,14 +12,14 @@ def main():
     if r.status_code != 200:
         print("FAILED: wywolanie nie powiodlo sie: " + r.text)
         exit(2)
-    print(r.text)    
+    print(r.text)
     print(r.json())
     checkOutput(r.json())
 
 
 def checkOutput(rj):
     actual = jmespath.search('imie', rj)
-    expected = "Stefan"
+    expected = "Karola"
     if actual != expected:
         print("FAILED: We expected: " + expected + " but was " + actual)
         exit(1)
