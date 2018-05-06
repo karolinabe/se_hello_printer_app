@@ -1,4 +1,4 @@
-.PHONY: test test-api
+.PHONY: test test-api test_ui
 
 deps:
 	pip install -r requirements.txt && \
@@ -8,8 +8,7 @@ lint:
 	flake8 hello_world test
 
 test:
-	PYTHONPATH=. py.test
-	PYTHONPATH=. py.test  --verbose -s
+	PYTHONPATH=. py.test -v -m "not uitest"
 
 test_smoke:
 	curl -I --fail 127.0.0.1:5000
@@ -22,6 +21,9 @@ test_xunit:
 
 test_api:
 	python test-api/check_api.py
+
+test_ui:
+	pytest --verbose -s test_ui/test_ui.py
 
 run:
 	python main.py

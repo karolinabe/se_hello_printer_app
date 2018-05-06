@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<header>
+  <meta charset="utf-8">
+  <title>To jest strona wyswietlajaca komunikat "Witaj swiecie"</title>
+  <script type="text/javascript"
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</header>
+
+<body>
+  <script type="text/javascript">
+        $(document).ready(function() {
+            console.log( "ready!" );
+
+            $.getJSON( "/?output=json", function( data ) {
+                console.log( data );
+                $('#imie').text(data['imie'])
+            })
+        });
+    </script>
+
+    <div>Cześć! <p id='imie'></p><div>
+  <h1 id="MyMessage">WITAJ SWIECIE!</h1>
+  <a id="GoogleLink" href="https://google.com/search?q=imiona%20slawnych%20ludzi">Znajdz imiona znanych ludzi</a>
+
+</body>
+</html>
