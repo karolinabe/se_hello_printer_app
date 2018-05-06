@@ -20,6 +20,9 @@ test_cov:
 test_xunit:
 	PYTHONPATH=. py.test -s --cov=. --junit-xml=test_results.xml
 
+test_api:
+	
+
 run:
 	python main.py
 
