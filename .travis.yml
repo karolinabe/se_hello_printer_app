@@ -8,10 +8,13 @@ install:
   - make deps
 
 script:
+  - make lint
   - make test
+  - make docker_run
+  - make test_api
+  - make docker_build
 
 after_success:
-  - make docker_build
   - make docker_push
 
 deploy:
