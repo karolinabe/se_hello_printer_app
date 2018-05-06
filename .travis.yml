@@ -11,6 +11,7 @@ script:
   - make lint
   - make test
   - make docker_run
+  - sleep 3
   - make test_api
   - make docker_build
 
